@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Diseases</h1>
+   
+        {% for disease in disease_paginated %}
+          <ul>
+                
+               
+                <li>{{ disease.name }}
+                  {% for symptom in disease.symptoms %}
+                  <ul>
+                    <li>{{symptom.conditions}}</li>
+                  </ul>
+                  {% endfor %}
+                
+                </li>
+               
+            </ul>
+        {% endfor %}
+       <div class="navigation">
+    {{ knp_pagination_render(disease_paginated) }}
+</div>
+    </table>
+{% endblock %}
