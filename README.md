@@ -7,5 +7,11 @@ This is a test application in symfony 3.0.2 which can manage lists of medical co
  - FOS User Bundle
  - Knp Paginator Bundle
  - Stmfony Assetic Bundle
+ - DoctrineFixturesBundle
+
+## Load data fixtures
+
+`php bin/console doctrine:fixtures:load`
+
   
  
