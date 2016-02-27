@@ -15,7 +15,7 @@ class DefaultController extends Controller
     {
        $em = $this->getDoctrine()->getManager();
 
-        $diseases = $em->getRepository('ComakeitBundle:Disease')->findAll();
+        $diseases = $em->getRepository('ComakeitBundle:Disease')->findBy([],['name'=>'ASC']);
         
         $paginator  = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
